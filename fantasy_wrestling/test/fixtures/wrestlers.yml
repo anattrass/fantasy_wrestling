@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hometown: MyString
+  finisher: MyString
+  weight: 1
+  value: 1
+
+two:
+  name: MyString
+  hometown: MyString
+  finisher: MyString
+  weight: 1
+  value: 1
