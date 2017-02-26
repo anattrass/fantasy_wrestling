@@ -1,7 +1,8 @@
 Wrestler.delete_all()
+Championship.delete_all()
 
 
-Wrestler.create(
+w1 = Wrestler.create(
       {
         name: "AJ Styles", 
         hometown: "Gainesville, Georgia", 
@@ -12,7 +13,7 @@ Wrestler.create(
       }
 )
 
-Wrestler.create(
+w2 = Wrestler.create(
       {
         name: "Bray Wyatt", 
         hometown: "Parts Unkown", 
@@ -23,7 +24,7 @@ Wrestler.create(
       }
 )
 
-Wrestler.create(
+w3 = Wrestler.create(
       {
         name: "Kevin Owens", 
         hometown: "Maryville, Quebeck, Canada", 
@@ -34,7 +35,7 @@ Wrestler.create(
       }
 )
 
-Wrestler.create(
+w4 = Wrestler.create(
       {
         name: "Chris Jericho", 
         hometown: "Winipeg, Canada", 
@@ -44,4 +45,10 @@ Wrestler.create(
         image: "http://2.bp.blogspot.com/-1eU_K9G4nuY/UQdFkz1-rHI/AAAAAAAAGIo/SlB8ImouwQg/s1600/Chris+Jericho+WWE+Y2J.gif"
       }
 )
+
+Championship.create({wrestler: w2, title: "WWE Championship"})
+Championship.create({wrestler: w3, title: "Universal Championship"})
+Championship.create({wrestler: w1, title: "Intercontinental Championship"})
+Championship.create({wrestler: w4, title: "US Championship"})
+
 

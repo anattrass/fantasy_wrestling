@@ -3,12 +3,18 @@ class WrestlersController < ApplicationController
   
   def index
     wrestlers = Wrestler.all  
-    render :json => wrestlers.to_json()
+    render :json => wrestlers.to_json(
+      {include:
+        {championships: {only: :title}}
+        })
   end
 
   def show
       wrestler = Wrestler.find(params[:id])
-      render :json => wrestler.as_json()
+      render :json => wrestler.as_json(
+      {include:
+        {championships: {only: :title}}
+        })
   end
 
   def create
@@ -18,7 +24,7 @@ class WrestlersController < ApplicationController
 
   private
   def wrestler_params
-    params.require(:wrestler).permit([:name, :hometown, :finisher, :weight, :value])
+    params.require(:wrestler).permit([:name, :hometown, :finisher, :weight, :value, :image])
   end
 
 end
