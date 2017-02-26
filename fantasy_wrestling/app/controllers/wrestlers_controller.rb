@@ -8,7 +8,7 @@ class WrestlersController < ApplicationController
 
   def show
       wrestler = Wrestler.find(params[:id])
-      render :json => artist.as_json()
+      render :json => wrestler.as_json()
   end
 
   def create
