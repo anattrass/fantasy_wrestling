@@ -1,5 +1,6 @@
 Wrestler.delete_all()
 Championship.delete_all()
+Match.delete_all()
 
 
 w1 = Wrestler.create(
@@ -46,9 +47,64 @@ w4 = Wrestler.create(
       }
 )
 
+w5 = Wrestler.create(
+      {
+        name: "Dean Ambrose", 
+        hometown: "Cincinnati, Ohio", 
+        finisher: "Dirty Deeds", 
+        weight: 225, 
+        value: 80, 
+        image: "http://2.bp.blogspot.com/-D36YWzidzIk/U7Hpbzo1VtI/AAAAAAAAIIk/xGV1LiCwJrU/s1600/dean+ambrose+WWE+cartoon.gif"
+      }
+)
+
+w6 = Wrestler.create(
+      {
+        name: "Roman Reigns", 
+        hometown: "Pensacola, Florida", 
+        finisher: "Spear", 
+        weight: 265, 
+        value: 85, 
+        image: "http://vignette3.wikia.nocookie.net/family-guy-the-quest-for-stuff/images/6/60/RomanReigns-animation.png/revision/latest?cb=20160403151036"
+      }
+)
+
+w7 = Wrestler.create(
+      {
+        name: "John Cena", 
+        hometown: "West Newbury, Massachusetts", 
+        finisher: "Attitude Adjustment", 
+        weight: 251, 
+        value: 90, 
+        image: "http://vignette1.wikia.nocookie.net/family-guy-the-quest-for-stuff/images/0/00/Johncena-animation.png/revision/latest?cb=20160325045457"
+      }
+)
+
+w8 = Wrestler.create(
+      {
+        name: "Randy Orton", 
+        hometown: "St Louis, Missouri", 
+        finisher: "RKO", 
+        weight: 250, 
+        value: 90, 
+        image: "http://3.bp.blogspot.com/-lme5-Nmry9s/UgTYtqXyvLI/AAAAAAAAACA/atpZD8w-T2w/s1600/1328736648595.png"
+      }
+)
+
 Championship.create({wrestler: w2, title: "WWE Championship"})
 Championship.create({wrestler: w3, title: "Universal Championship"})
-Championship.create({wrestler: w1, title: "Intercontinental Championship"})
+Championship.create({wrestler: w5, title: "Intercontinental Championship"})
 Championship.create({wrestler: w4, title: "US Championship"})
+
+Match.create({wrestler: w4, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-20", opponent: w3.name, result: "DQ", winner: w3.name})
+Match.create({wrestler: w2, tvShow: "Smackdown Live", stipulation: "No DQ, non-title", date: "2017-02-21", opponent: w1.name, result: "Countout", winner: w1.name})
+Match.create({wrestler: w1, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w8.name, result: "Pinfall", winner: w1.name})
+Match.create({wrestler: w8, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w1.name, result: "Pinfall", winner: w1.name})
+Match.create({wrestler: w3, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w4.name, result: "DQ", winner: w3.name})
+Match.create({wrestler: w1, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w2.name, result: "Pinfall", winner: w1.name})
+Match.create({wrestler: w5, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w7.name, result: "Pinfall", winner: w7.name})
+Match.create({wrestler: w7, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w5.name, result: "Pinfall", winner: w7.name})
+Match.create({wrestler: w6, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-20", opponent: w4.name, result: "Pinfall", winner: w6.name})
+
 
 
