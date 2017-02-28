@@ -1,11 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var CountryContainer = require('./containers/CountryContainer.jsx');
+var WrestlerContainer = require('./containers/WrestlerContainer.jsx');
 
 window.onload = function () {
   ReactDOM.render(
-    <CountryContainer />,
+    <WrestlerContainer />,
     document.getElementById('app')
   );
 };
