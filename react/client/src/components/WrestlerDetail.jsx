@@ -6,9 +6,9 @@ var WrestlerDetail = function(props) {
     }
     return (<div>
       <h4>Name: {props.wrestler.name}</h4> 
-      <h4>Population: {props.wrestler.population}</h4>
-      <h4>Capital City: {props.wrestler.capital}</h4>
-      <h4>Local Name: {props.wrestler.demonym}</h4>
+      <h4>Hometown: {props.wrestler.hometown}</h4>
+      <h4>Weighing in at: {props.wrestler.weight}lbs</h4>
+      <h4>Finishing Manoeuvre: {props.wrestler.finisher}</h4>
       </div>)
 };
 

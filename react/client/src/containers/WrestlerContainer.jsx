@@ -1,6 +1,7 @@
 var React = require('react');
 var WrestlerSelector = require('../components/WrestlerSelector');
 var WrestlerDetail = require('../components/WrestlerDetail');
+var MatchDetail = require('../components/MatchDetail');
 
 var WrestlerContainer = React.createClass({
   getInitialState: function () {
@@ -8,7 +9,7 @@ var WrestlerContainer = React.createClass({
   },
 
   componentDidMount: function(){
-    var url = "https://restcountries.eu/rest/v1/all";
+    var url = "http://localhost:3000/api/wrestlers";
     var request = new XMLHttpRequest();
     request.open('GET', url);
     request.onload = function() {
@@ -27,9 +28,10 @@ var WrestlerContainer = React.createClass({
   render: function () {
     return (
       <div className="container">
-        <h2>Country Container</h2>
+        <h2>Wrestler Information</h2>
         <WrestlerSelector wrestlers={this.state.wrestlers} selectWrestler={this.setFocusWrestler}/>
         <WrestlerDetail wrestler={this.state.focusWrestler}/>
+        <MatchDetail wrestler={this.state.focusWrestler}/>
       </div>
     );
   }

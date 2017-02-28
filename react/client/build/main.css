@@ -1,5 +1,7 @@
 body {
-
+  background-image: url("http://vignette3.wikia.nocookie.net/joke-battles/images/c/cd/WWE_Logo.png/revision/latest?cb=20151208224444");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 h2 {
@@ -14,9 +16,7 @@ h2 {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-image: url("http://vignette3.wikia.nocookie.net/joke-battles/images/c/cd/WWE_Logo.png/revision/latest?cb=20151208224444");
-  background-repeat: no-repeat;
-  background-size: contain;
+
 }
 
 h4 {
