@@ -9,6 +9,7 @@ var WrestlerDetail = function(props) {
       <h4>Hometown: {props.wrestler.hometown}</h4>
       <h4>Weighing in at: {props.wrestler.weight}lbs</h4>
       <h4>Finishing Manoeuvre: {props.wrestler.finisher}</h4>
+      <div className="wrestler-image"><img src={props.wrestler.image}/></div> 
       </div>)
 };
 
