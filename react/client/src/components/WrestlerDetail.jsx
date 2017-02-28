@@ -4,6 +4,7 @@ var WrestlerDetail = function(props) {
     if (!props.wrestler) {
       return <h4>No Wrestler Selected </h4>
     }
+
     return (<div>
       <h4>Name: {props.wrestler.name}</h4> 
       <h4>Hometown: {props.wrestler.hometown}</h4>

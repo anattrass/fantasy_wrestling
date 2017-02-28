@@ -1,8 +1,8 @@
 body {
   background-image: url("http://vignette3.wikia.nocookie.net/joke-battles/images/c/cd/WWE_Logo.png/revision/latest?cb=20151208224444");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+  background-size: 10%;
+  background-position: top-left;
 }
 
 h2 {
@@ -31,9 +31,19 @@ img {
 }
 
 .wrestler-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 20%;
   width: 15%;
+}
+
+.matches {
+  border-bottom-width: 50px;
+  border-bottom-color: dodgerBlue;
+  padding: 5%;
+}
+
+.matches-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

@@ -2,6 +2,7 @@ var React = require('react');
 var WrestlerSelector = require('../components/WrestlerSelector');
 var WrestlerDetail = require('../components/WrestlerDetail');
 var MatchDetail = require('../components/MatchDetail');
+var ChampionshipDetail = require('../components/ChampionshipDetail');
 
 var WrestlerContainer = React.createClass({
   getInitialState: function () {
@@ -31,6 +32,7 @@ var WrestlerContainer = React.createClass({
         <h2>Wrestler Information</h2>
         <WrestlerSelector wrestlers={this.state.wrestlers} selectWrestler={this.setFocusWrestler}/>
         <WrestlerDetail wrestler={this.state.focusWrestler}/>
+        <ChampionshipDetail wrestler={this.state.focusWrestler}/>
         <MatchDetail wrestler={this.state.focusWrestler}/>
       </div>
     );
