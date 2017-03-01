@@ -3,6 +3,7 @@ var WrestlerSelector = require('../components/WrestlerSelector');
 var WrestlerDetail = require('../components/WrestlerDetail');
 var MatchDetail = require('../components/MatchDetail');
 var ChampionshipDetail = require('../components/ChampionshipDetail');
+var GuessWinner = require('../components/GuessWinner');
 
 var WrestlerContainer = React.createClass({
   getInitialState: function () {
@@ -33,7 +34,7 @@ var WrestlerContainer = React.createClass({
         <WrestlerSelector wrestlers={this.state.wrestlers} selectWrestler={this.setFocusWrestler}/>
         <WrestlerDetail wrestler={this.state.focusWrestler}/>
         <ChampionshipDetail wrestler={this.state.focusWrestler}/>
-        <MatchDetail wrestler={this.state.focusWrestler}/>
+        <MatchDetail wrestler={this.state.focusWrestler} />
       </div>
     );
   }

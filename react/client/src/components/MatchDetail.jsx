@@ -15,13 +15,17 @@ var MatchDetail = React.createClass({
           <h4>Date: {match.date}</h4>
           <h4>Stipulation: {match.stipulation}</h4>
           <h4>Opponent: {match.opponent}</h4>
-          <h4>The winner: {match.winner} By {match.result}</h4>
-          <h4>----------------------------------</h4>
         </div>
       )
     })
     return (
-      <div className="matches-container"> {matches} </div>
+      <div className="matches-container"> 
+
+      <h3>Matches:</h3>
+
+      {matches} 
+
+      </div>
       );
     }
 });
