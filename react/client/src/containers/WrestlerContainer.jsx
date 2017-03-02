@@ -3,7 +3,6 @@ var WrestlerSelector = require('../components/WrestlerSelector');
 var WrestlerDetail = require('../components/WrestlerDetail');
 var MatchDetail = require('../components/MatchDetail');
 var ChampionshipDetail = require('../components/ChampionshipDetail');
-var GuessWinner = require('../components/GuessWinner');
 
 var WrestlerContainer = React.createClass({
   getInitialState: function () {
@@ -17,7 +16,7 @@ var WrestlerContainer = React.createClass({
     request.onload = function() {
       if (request.status === 200) {
         var data = JSON.parse(request.responseText);
-        this.setState({wrestlers: data, focusWrestler: data[0]});
+        this.setState({wrestlers: data});
       }
     }.bind(this);
     request.send(null);
@@ -30,11 +29,16 @@ var WrestlerContainer = React.createClass({
   render: function () {
     return (
       <div className="container">
-        <h2>Wrestler Information</h2>
+        <div className="heading-dropdown">
+        <h1 className="main-heading">Who's Clothesline is it Anyway?</h1>
+        <h2 className="main-heading">Fantasy Wrestling</h2>
         <WrestlerSelector wrestlers={this.state.wrestlers} selectWrestler={this.setFocusWrestler}/>
-        <WrestlerDetail wrestler={this.state.focusWrestler}/>
-        <ChampionshipDetail wrestler={this.state.focusWrestler}/>
-        <MatchDetail wrestler={this.state.focusWrestler} />
+        </div>
+        <div className="detail-container">
+        <WrestlerDetail className="wrestler-detail" wrestler={this.state.focusWrestler}/>
+        <ChampionshipDetail className="championship-detail" wrestler={this.state.focusWrestler}/>
+        <MatchDetail className="match-detail" wrestler={this.state.focusWrestler} />
+        </div>
       </div>
     );
   }

@@ -14,7 +14,8 @@ var WrestlerSelector = React.createClass({
       return <option value={index} key={index}>{wrestler.name}</option>
     })
     return (
-      <select id="wrestlers" value={this.state.selectedIndex} onChange={this.handleChange}>
+      <select className="wrestler-selector" value={this.state.selectedIndex} onChange={this.handleChange}>
+      <option selected disabled>Choose a wrestler to begin</option>
         {options}
       </select>
     );

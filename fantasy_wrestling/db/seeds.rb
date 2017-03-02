@@ -201,40 +201,44 @@ w18 = Wrestler.create(
       }
 )
 
-Championship.create({wrestler: w2, title: "WWE Championship"})
-Championship.create({wrestler: w3, title: "Universal Championship"})
-Championship.create({wrestler: w5, title: "Intercontinental Championship"})
-Championship.create({wrestler: w4, title: "US Championship"})
+Championship.create({wrestler: w2, title: "WWE Championship", image: "http://i.imgur.com/PU3l2F1.png"})
 
-Match.create({wrestler: w4, wrestler_name: w4.name, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-20", opponent: w3.name, result: "DQ", winner: w3.name})
+Championship.create({wrestler: w3, title: "Universal Championship", image: "http://www.wwe.com/f/styles/wwe_16_9_s/public/all/2016/08/WWE_Universal_Championship--1a4dc369c94f8c5e349be3674485a164.png"})
 
-Match.create({wrestler: w2, wrestler_name: w2.name, tvShow: "Smackdown Live", stipulation: "No DQ, non-title", date: "2017-02-21", opponent: w1.name, result: "Countout", winner: w1.name})
+Championship.create({wrestler: w5, title: "Intercontinental Championship", image: "http://vignette2.wikia.nocookie.net/wwenetwork/images/e/e2/WWE_Intercontinental_Championship.png/revision/latest?cb=20160322180439"})
 
-Match.create({wrestler: w1, wrestler_name: w1.name, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w8.name, result: "Pinfall", winner: w1.name})
+Championship.create({wrestler: w4, title: "US Championship", image: "http://vignette4.wikia.nocookie.net/wrestling-jat/images/b/b7/United-states-championship_2014.png/revision/latest?cb=20150518115648"})
 
-Match.create({wrestler: w8, wrestler_name: w8.name, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w1.name, result: "Pinfall", winner: w1.name})
+Championship.create({wrestler: w15, title: "Raw Womens Chamionship", image: "https://upload.wikimedia.org/wikipedia/en/f/fa/WWE_Womens_2016_Championship.png"})
 
-Match.create({wrestler: w3, wrestler_name: w3.name, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w4.name, result: "DQ", winner: w3.name})
+Championship.create({wrestler: w13, title: "Raw Tag-Team Chamionship", image: "https://upload.wikimedia.org/wikipedia/en/archive/7/76/20161221045335!WWE_Raw_Tag_Team_Championship_belt_Red.png"})
 
-Match.create({wrestler: w1, wrestler_name: w1.name, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w2.name, result: "Pinfall", winner: w1.name})
+Championship.create({wrestler: w11, title: "Cruiserweight Chamionship", image: "http://vignette2.wikia.nocookie.net/wwenetwork/images/c/ce/CWC_Championship.png/revision/latest?cb=20160915083112"})
 
-Match.create({wrestler: w5, wrestler_name: w5.name, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w7.name, result: "Pinfall", winner: w7.name})
-
-Match.create({wrestler: w7, wrestler_name: w7.name, tvShow: "Smackdown Live", stipulation: "Normal Rules, non-title", date: "2017-02-21", opponent: w5.name, result: "Pinfall", winner: w7.name})
-
-Match.create({wrestler: w6, wrestler_name: w6.name, tvShow: "RAW", stipulation: "Normal Rules, non-title", date: "2017-02-20", opponent: w4.name, result: "Pinfall", winner: w6.name})
 
 Match.create({wrestler: w3, wrestler_name: w3.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w10.name, result: "", winner: ""})
 
+Match.create({wrestler: w10, wrestler_name: w10.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w3.name, result: "", winner: ""})
+
 Match.create({wrestler: w6, wrestler_name: w6.name, tvShow: "Fastlane", stipulation: "Normal Rules, non-title", date: "2017-03-05", opponent: w9.name, result: "", winner: ""})
+
+Match.create({wrestler: w9, wrestler_name: w9.name, tvShow: "Fastlane", stipulation: "Normal Rules, non-title", date: "2017-03-05", opponent: w6.name, result: "", winner: ""})
 
 Match.create({wrestler: w11, wrestler_name: w11.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w12.name, result: "", winner: ""})
 
+Match.create({wrestler: w12, wrestler_name: w12.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w11.name, result: "", winner: ""})
+
 Match.create({wrestler: w13, wrestler_name: w13.name, tvShow: "Fastlane", stipulation: "Tag-Team, Title Match", date: "2017-03-05", opponent: w14.name, result: "", winner: ""})
+
+Match.create({wrestler: w14, wrestler_name: w14.name, tvShow: "Fastlane", stipulation: "Tag-Team, Title Match", date: "2017-03-05", opponent: w13.name, result: "", winner: ""})
 
 Match.create({wrestler: w15, wrestler_name: w15.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w16.name, result: "", winner: ""})
 
+Match.create({wrestler: w16, wrestler_name: w16.name, tvShow: "Fastlane", stipulation: "Normal Rules, Title Match", date: "2017-03-05", opponent: w15.name, result: "", winner: ""})
+
 Match.create({wrestler: w17, wrestler_name: w17.name, tvShow: "Fastlane", stipulation: "Normal Rules, non-title", date: "2017-03-05", opponent: w18.name, result: "", winner: ""})
+
+Match.create({wrestler: w18, wrestler_name: w18.name, tvShow: "Fastlane", stipulation: "Normal Rules, non-title", date: "2017-03-05", opponent: w17.name, result: "", winner: ""})
 
 
 

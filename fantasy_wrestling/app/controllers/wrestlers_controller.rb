@@ -5,7 +5,7 @@ class WrestlersController < ApplicationController
     wrestlers = Wrestler.all()  
     render :json => wrestlers.as_json(
       {include: [
-        { championships: {only: :title} },
+        { championships: {only: [:title, :image]} },
         { matches: {only: [:tvShow, :date, :stipulation, :opponent, :winner, :result]} }
       ]
       })
